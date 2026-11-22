@@ -1,0 +1,20 @@
+{
+  "name": "fiorella-y-david-wedding",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wedding website for Fiorella & David: personal guest links, RSVP and admin.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.1.0",
+    "csv-parse": "^5.5.6",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1"
+  }
+}

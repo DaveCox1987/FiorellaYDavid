@@ -1,0 +1,25 @@
+# Render blueprint: one always-on Node web service. The database is on Neon.
+services:
+  - type: web
+    name: fiorella-y-david
+    runtime: node
+    region: frankfurt
+    plan: starter
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: SETUP_CODE
+        sync: false
+      - key: BASE_URL
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_SENDER_EMAIL
+        sync: false

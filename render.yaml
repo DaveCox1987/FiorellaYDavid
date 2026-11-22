@@ -1,10 +1,10 @@
-# Render blueprint: one always-on Node web service. The database is on Neon.
+# Render blueprint: one Node web service. The database is on Neon.
 services:
   - type: web
     name: fiorella-y-david
     runtime: node
     region: frankfurt
-    plan: starter
+    plan: free
     buildCommand: npm ci --omit=dev
     startCommand: node server.js
     healthCheckPath: /healthz
